@@ -10,7 +10,7 @@
     "npm": ">=2"
   },
   "devDependencies": {
-    "adm-zip": "0.4.3",
+    "adm-zip": "0.4.13",
     "app-root-path": "^1.0.0",
     "archiver": "^0.10.0",
     "async": "0.2.9",
