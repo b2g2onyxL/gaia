@@ -56,7 +56,7 @@
     "proxyquire": "~0.4",
     "q": "~0.9.7",
     "request": "2.33.0",
-    "restify": "2.8.1",
+    "restify": "8.5.1",
     "rimraf": "2.2.5",
     "sinon": "1.7.3",
     "SMS": "file:./apps/sms",
