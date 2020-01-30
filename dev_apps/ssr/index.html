@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no"/>
+		<title>SSR App</title>
+		
+		<link href="css/action_menu.css" rel="stylesheet" type="text/css"/>
+		<link href="css/transitions.css" rel="stylesheet" type="text/css"/>
+		<link href="css/util.css" rel="stylesheet" type="text/css"/>
+		<link href="css/esconde.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style/headers.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style/lists.css" rel="stylesheet" type="text/css"/>
+		<link href="css/styles.css" rel="stylesheet" type="text/css"/>
+
+		<script type="text/javascript" defer src="js/menu.js"></script>
+ 		<script type="text/javascript" src="js/socket.io.js"></script>
+  		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		
+	</head>
+
+	<body role="application">
+		<section role="region">
+			<header class="fixed">
+				<a href="index.html" id="header-cluster">
+					<span id="back-b" class="icon icon-back" style="display:none">back</span>
+					<span id="h-logo" class="icon icon-logo">logo</span>
+					<h1 id="h-title" class="heading"></h1>
+				</a>
+				<menu type="toolbar">
+					<a href="#" id="start-btn" >
+						<span id="ssr-start" style="display:inline-block" class="icon icon-ssr-start">start</span>
+						<span id="ssr-stop" style="display:none"  class="icon icon-ssr-stop">stop</span>
+					</a>
+					<a href="#" id="reflash-btn">
+						<span id="reflash-icon" class="icon icon-search">reflash</span>
+					</a>
+					<a href="#menu-dialog" id="menu-btn"><span class="icon icon-menu">menu</span></a>
+				</menu>
+			</header>
+			<div class="content" data-type="list">
+				<ul id="content-list">
+					<li class="contact">
+							<p class="cht-grp-nam">server:</p>
+							<p class="cht-grp-msg"><input type="text" id="server"></input></p>
+					</li>
+					<li class="contact">
+							<p class="cht-grp-nam">server_port:</p>
+							<p class="cht-grp-msg"><input type="text" id="server_port"></input></p>
+					</li>
+					<li class="contact">
+							<p class="cht-grp-nam">local_port:</p>
+							<p class="cht-grp-msg"><input type="text" id="local_port"></input></p>
+					</li>
+					<li class="contact">
+							<p class="cht-grp-nam">password:</p>
+							<p class="cht-grp-msg"><input type="text" id="password"></input></p>
+					</li>
+					<li class="contact">
+							<p class="cht-grp-nam">method:</p>
+							<p class="cht-grp-msg"><input type="text" id="method"></input></p>
+					</li>
+					<li class="contact">
+							<p class="cht-grp-nam">timeout:</p>
+							<p class="cht-grp-msg"><input type="text" id="timeout"></input></p>
+					</li>
+					<li class="contact">
+							<p class="cht-grp-nam">protocol:</p>
+							<p class="cht-grp-msg"><input type="text" id="protocol"></input></p>
+					</li>
+					<li class="contact">
+							<p class="cht-grp-nam">obfs:</p>
+							<p class="cht-grp-msg"><input type="text" id="obfs"></input></p>
+					</li>
+					<li class="contact">
+							<p class="cht-grp-nam">obfs_param:</p>
+							<p class="cht-grp-msg"><input type="text" id="obfs_param"></input></p>
+					</li>
+					<li class="contact">
+							<p class="cht-grp-nam">protocol_param:</p>
+							<p class="cht-grp-msg"><input type="text" id="protocol_param"></input></p>
+					</li>
+
+				</ul>
+			</div>
+			<section id="action-menu" data-position="back" class="fullscreen">
+				<form role="dialog" data-type="action">
+					<menu>
+						<ul>
+							<li> <a href="#"> New Group </a></li>
+							<li> <a href="#"> New Secret Chat </a></li>
+							<li> <a href="#"> Contacts </a></li>
+							<li> <a href="#"> Settings </a></li>
+						</ul>
+					</menu>
+				</form>
+			</section>
+		</section>
+	</body>
+		<script type="text/javascript" src="js/app.js"></script>
+</html>

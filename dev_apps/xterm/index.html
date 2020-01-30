@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SSH Terminal</title>
+    <link rel="stylesheet" href="./style/xterm.css" />
+    <script src="./js/xterm.js"></script>
+    <script src="./js/fit.js"></script>
+    <script src="./js/socket.io.js"></script>
+    <script src="./js/main.js"></script>
+    <style>
+      body {
+        font-family: helvetica, sans-serif, arial;
+        font-size: 1em;
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+      }
+      #terminal-container {
+        width: 96%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2px;
+      }
+      #terminal-container .terminal {
+        background-color: #111;
+        color: #fafafa;
+        padding: 2px;
+      }
+      #terminal-container .terminal:focus .terminal-cursor {
+        background-color: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+	 <h1 id="h1">SSH Terminal</h1>
+    <div id="terminal-container"></div>
+  </body>
+</html>

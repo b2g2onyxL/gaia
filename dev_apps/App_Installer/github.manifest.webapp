@@ -1,0 +1,16 @@
+{
+	"name": "App Installer",
+	"description": "Allows to install apps from URL",
+	"size": 16771,
+	"package_path": "https://schnark.github.io/ffosapp-installer/ffosapp-installer.zip",
+	"icons": {
+		"512": "/icon-512.png",
+		"128": "/icon-128.png"
+	},
+	"version": "1.3",
+	"developer": {
+		"name": "Michael Müller",
+		"url": "https://github.com/Schnark"
+	},
+	"default_locale": "en"
+}

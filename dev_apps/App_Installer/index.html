@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>App Installer</title>
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/svg+xml" href="icon.svg" sizes="any">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<h1>Install Firefox OS Apps</h1>
+<section>
+<label>URL to hosted app:
+<input id="hosted-url-input" type="url" placeholder="https://example.org/manifest.webapp"></label>
+<button id="hosted-url-button">Install hosted app</button>
+</section>
+<section>
+<label>URL to packaged app:
+<input id="packaged-url-input" type="url" value="http://localhost:8080/manifest.webapp" placeholder="https://example.org/manifest.webapp"></label>
+<button id="packaged-url-button">Install packaged app</button>
+</section>
+<section>
+<p>How to install a packaged app from a ZIP on your device:</p>
+<ol>
+<li>Install <a href="https://marketplace.firefox.com/app/webserver" target="_blank" rel="noopener">WebServer</a> (or a similar app).</li>
+<li>Create an additional manifest file which should be a copy of the original, but instead of <code>launch_path</code> include a <code>package_path</code>, pointing to the ZIP (e.g. <code>http://localhost:8080/app.zip</code>). Additionally, you can add an entry <code>size</code> with the size of the ZIP in bytes.</li>
+<li>Start the webserver, and make sure this manifest file and the ZIP are accesible under the expected URLs.</li>
+<li>Install your app using this app.</li>
+<li>When you want to install another app, make sure it uses different file names for the manifest and ZIP files.</li>
+<li>To update your app, update the manifest and the ZIP files, and make sure the webserver is runnnig when your device checks for updates. You can do so by disabling the network, rebooting, starting the webserver and then enabling the network again.</li>
+</ol>
+</section>
+<script src="install.js"></script>
+</body></html>

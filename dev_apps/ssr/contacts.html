@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no"/>
+		<title>Telegram App</title>
+
+		<link href="css/style/headers.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style/lists.css" rel="stylesheet" type="text/css"/>
+		<link href="css/styles.css" rel="stylesheet" type="text/css"/>
+
+		<script src="js/search.js"></script>
+		<script src="js/contacts.js"></script>
+	</head>
+
+	<body role="application">
+		<section role="region">
+			<header class="fixed">
+				<a href="index.html" id="header-cluster">
+					<span class="icon icon-back">back</span>
+					<span id="h-logo" class="icon icon-logo">logo</span>
+					<h1 id="h-title" class="heading">Select Contact</h1>
+				</a>
+				<menu type="toolbar">
+					<a href="#" id="search-btn" onclick="showBar()"><span class="icon icon-search">search</span></a>
+				</menu>
+				<form id="search-form" action="#">
+					<input id="search-input" type="text" placeholder="search..." required="required" value="" onKeyUp="inputFilter(value)"></input>
+					<button id="cancel-btn" type="reset" onClick="keepFocus()">Remove text</button>
+				</form>
+			</header>
+			<div class="content" data-type="list">
+				<ul id="u-list">
+					<li class="contact">
+						<a href="#">
+							<img class="cht-grp-img" src="img/jesus.jpg" alt=""/>
+							<p class="cht-grp-nam">Jesus</p>
+							<p class="cht-grp-msg">Last seem at 10:00 PM</p>
+						</a>
+					</li>
+					<li class="contact">
+						<a href="#">
+							<img class="cht-grp-img" src="img/chuck.jpg" alt=""/>
+							<p class="cht-grp-nam">Chuck Norris</p>
+							<p class="cht-grp-msg">Last seem at 12:00 PM</p>
+						</a>
+					</li>
+					<li class="contact">
+						<a href="#">
+							<img class="cht-grp-img" src="img/bean.png" alt=""/>
+							<p class="cht-grp-nam">Mr. Bean</p>
+							<p class="cht-grp-msg">Last seem at 14:00 PM</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</body>
+</html>

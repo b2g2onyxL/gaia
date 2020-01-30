@@ -1,0 +1,19 @@
+{
+  "name": "Telegram",
+  "version": "1.0",
+  "description": "A app basic for study",
+  "launch_path": "/index.html",
+  "permissions": {
+    "storage": {
+      "description": "Conversation safe."
+      }
+  },
+  "developer": {
+    "name": "Luiz Frazão e Vitor Augusto",
+    "url": "luizfrazao_07@hotmail.com"
+  },
+  "icons": {
+    "60": "/css/icons/icon_60.png",
+    "128": "/css/icons/icon_128.png"
+  }
+}

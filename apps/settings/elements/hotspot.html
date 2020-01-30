@@ -1,0 +1,125 @@
+<element name="hotspot" extends="section">
+  <template>
+
+    <gaia-header action="back" data-href="#root">
+      <h1 data-l10n-id="internetSharing-header"></h1>
+    </gaia-header>
+
+    <div>
+      <header>
+        <h2 data-l10n-id="internetSharing-wifi"></h2>
+      </header>
+      <ul>
+        <li>
+          <gaia-switch id="tethering-wifi-enabled">
+            <label data-l10n-id="wifi-hotspot"></label>
+            <details id="wifi-hotspot-msg"></details>
+          </gaia-switch>
+        </li>
+        <li class="description">
+          <p data-l10n-id="internetSharing-wifi-description"></p>
+        </li>
+        <li id="hotspot-settings-section">
+          <a class="menu-item" href="#">
+            <span data-l10n-id="hotspotSettings"></span>
+          </a>
+        </li>
+      </ul>
+
+      <header>
+        <h2 data-l10n-id="internetSharing-usb"></h2>
+      </header>
+      <ul>
+        <li>
+          <gaia-switch id="tethering-usb-enabled">
+            <label data-l10n-id="usb-tethering"></label>
+          </gaia-switch>
+        </li>
+        <li class="description">
+          <p data-l10n-id="internetSharing-usb-description"></p>
+        </li>
+      </ul>
+
+
+<!--                     ittat-ssr                              -->
+      <header>
+        <h2>SSR</h2>
+      </header>
+      <ul>
+        <li>
+          <gaia-switch style="" id="ssr-enabled">
+            <!-- <label data-l10n-id="usb-tethering"></label> -->
+            <label>SSR</label>
+          </gaia-switch>
+        </li>
+          <li class="description">
+            <p>SSR 运行状态消息</p>
+          </li>	<li data-state="on">
+          <progress></progress><span>正在刷新…</span>
+        </li>
+	<li data-state="ready">
+          <button>重新刷新</button>
+        </li>
+	<li >
+          <button>ON/OFF</button>
+        </li>
+          <li>
+            <p>server</p>
+            <input id="server" dir="auto"  maxlength="32" type="text">
+            </li><li>
+            <p>server_port</p>
+            <input id="server_port"  maxlength="32" dir="auto" type="text">
+          </li>
+          <li>
+            <p>local_port</p>
+            <input id="local_port"  maxlength="32" dir="auto" type="text">
+          </li>
+          <li>
+            <p>password</p>
+            <input id="password"  maxlength="32" dir="auto" type="text">
+          </li>
+          <li>
+            <p>method</p>
+            <input id="method" maxlength="32" dir="auto" type="text">
+          </li>
+          <li>
+            <p>timeout</p>
+            <input id="timeout" maxlength="32" dir="auto" type="text">
+          </li>
+	  <li>
+            <p>protocol</p>
+            <input id="protocol" maxlength="32" dir="auto" type="text">
+          </li>
+	  <li>
+            <p>obfs</p>
+            <input id="obfs" maxlength="32" dir="auto" type="text">
+          </li>
+	  <li>
+            <p>obfs_paramt</p>
+            <input id="obfs_paramt" maxlength="32" dir="auto" type="text">
+          </li>
+	  <li>
+            <p>protocol_param</p>
+            <input id="protocol_param" maxlength="32" dir="auto" type="text">
+          </li>
+          <li>
+                <p>Proxy Type</p>
+                <span class="button icon icon-dialog">
+                      <select name="ssr.layout.cols">
+                            <option value="3" data-l10n-id="homescreen-three-columns">三列</option>
+                            <option value="4" data-l10n-id="homescreen-four-columns">四列</option>
+                      </select>
+                </span>
+
+          </li>
+
+        
+      </ul>
+<!--                     ittat-ssr end                             -->
+
+    </div>
+
+    <panel data-path="panels/hotspot/panel"></panel>
+
+  </template>
+</element>
